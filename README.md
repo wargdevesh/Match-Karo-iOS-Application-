@@ -1,5 +1,6 @@
-# Match-Karo-iOS-Application-
-Match karo Application is a SwiftUI based iOS application that uses Clean Architecture , Coordinators and MVVM for the presentation layer and works in offline first approach using Core Data.
+# PeopelInteractiveAssessDeveshPandeyIOS
+
+An iOS profile-discovery app built with SwiftUI, UIKit navigation, async networking, and Core Data local storage. The app fetches profile data from the Random User API, stores it locally, and displays swipe-style profile cards with accept/decline actions.
 
 ## Features
 
@@ -122,4 +123,3 @@ Run tests from Xcode with:
 ```text
 Product > Test
 ```
-
