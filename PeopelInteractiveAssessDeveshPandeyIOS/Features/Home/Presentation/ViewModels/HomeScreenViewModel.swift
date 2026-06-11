@@ -38,9 +38,6 @@ final class HomeScreenViewModel: ObservableObject {
             .sink { [weak self] newValue in
                 // Handle the change, e.g., refetch data
                 self?.getDataFromDB()
-                if newValue {
-                    // Task { await self?.fetchData() }
-                }
             }
             .store(in: &cancellables)
         
@@ -103,7 +100,9 @@ func fetchUsers() async {
     do {
         let response = try await networkManager.fetchUsers(results: resultSize)
         users = response.results
-        await deleteUsersFromDB()
+        if resultSize  == 10 {
+            await deleteUsersFromDB()
+        }
         saveUserToDB(users: response.results)
         resultSize += 10
         title = "Loaded \(response.results.count) users"
