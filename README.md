@@ -2,6 +2,8 @@
 
 An iOS profile-discovery app built with SwiftUI, UIKit navigation, async networking, and Core Data local storage. The app fetches profile data from the Random User API, stores it locally, and displays swipe-style profile cards with accept/decline actions.
 
+Important -> The Api used in this project gives random result every time you call it and even when you do paging so for that reason the current behavior is until there is no page 0 call the local storage is not cleared. 
+
 ## Features
 
 - Profile card list built with SwiftUI `ScrollView` and `LazyVStack`
