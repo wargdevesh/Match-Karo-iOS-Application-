@@ -17,6 +17,7 @@ final class HomeScreenViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     private var resultSize: Int = 10
+    private let maxResultSize: Int = 60
     
     init(
         title: String = "Hello, world!",
@@ -92,7 +93,7 @@ func deleteUsersFromDB() async {
     }
 
 func fetchUsers() async {
-    guard !isLoading else { return }
+    guard !isLoading  && resultSize < maxResultSize else { return }
     
     isLoading = true
     errorMessage = nil
