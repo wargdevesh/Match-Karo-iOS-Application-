@@ -2,7 +2,7 @@ import SwiftUI
 import UIKit
 
 struct HomeScreen: View {
-    @StateObject var viewModel: HomeScreenViewModel
+    @ObservedObject var viewModel: HomeScreenViewModel
     @State private var currentContentOffset: CGPoint = .zero
     @State private var savedPaginationOffset: CGPoint?
     @State private var pagingScrollView: UIScrollView?
